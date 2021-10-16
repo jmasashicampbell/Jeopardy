@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeopardy</title>
+    <link rel="stylesheet" href="/styles.css" />
+
+</head>
+<body>
+    <div id="body-inner">
+        <div id="top-panel">
+            <div class="squircle-box side-box">
+                <h1>Jeopardy</h1>
+                <button type=button id="start-btn" onclick="getCategories()">Start Game</button>
+            </div>
+            <div id="question-box" class="squircle-box">
+                <div id="question"></div>
+                <form>
+                    <label style="font-weight: 800">What is </label>
+                    <input id="answerInput" type="text" disabled>
+                    <input id="answerSubmit" type="submit" value="Submit" disabled>
+                </form>
+                <div id="result"></div>
+            </div>
+            <div class="squircle-box side-box">
+                <div><h2>Score</h2></div>
+                <div id="score"></div>
+            </div>
+        </div>
+
+        <div id="board" class="squircle-box">
+            <div class="board-row">
+                <button type="button" class="board-box category-box" id="cat-0" disabled></button>
+                <button type="button" class="board-box category-box" id="cat-1" disabled></button>
+                <button type="button" class="board-box category-box" id="cat-2" disabled></button>
+                <button type="button" class="board-box category-box" id="cat-3" disabled></button>
+                <button type="button" class="board-box category-box" id="cat-4" disabled></button>
+                <button type="button" class="board-box category-box" id="cat-5" disabled></button>
+            </div>
+
+            <div class="board-row">
+                <button type="button" class="board-box clue-box" id="clue-0-200" onclick="getClue(0, 200)" disabled>$200</button>
+                <button type="button" class="board-box clue-box" id="clue-1-200" onclick="getClue(1, 200)" disabled>$200</button>
+                <button type="button" class="board-box clue-box" id="clue-2-200" onclick="getClue(2, 200)" disabled>$200</button>
+                <button type="button" class="board-box clue-box" id="clue-3-200" onclick="getClue(3, 200)" disabled>$200</button>
+                <button type="button" class="board-box clue-box" id="clue-4-200" onclick="getClue(4, 200)" disabled>$200</button>
+                <button type="button" class="board-box clue-box" id="clue-5-200" onclick="getClue(5, 200)" disabled>$200</button>
+            </div>
+
+            <div class="board-row">
+                <button type="button" class="board-box clue-box" id="clue-0-400" onclick="getClue(0, 400)" disabled>$400</button>
+                <button type="button" class="board-box clue-box" id="clue-1-400" onclick="getClue(1, 400)" disabled>$400</button>
+                <button type="button" class="board-box clue-box" id="clue-2-400" onclick="getClue(2, 400)" disabled>$400</button>
+                <button type="button" class="board-box clue-box" id="clue-3-400" onclick="getClue(3, 400)" disabled>$400</button>
+                <button type="button" class="board-box clue-box" id="clue-4-400" onclick="getClue(4, 400)" disabled>$400</button>
+                <button type="button" class="board-box clue-box" id="clue-5-400" onclick="getClue(5, 400)" disabled>$400</button>
+            </div>
+
+            <div class="board-row">
+                <button type="button" class="board-box clue-box" id="clue-0-600" onclick="getClue(0, 600)" disabled>$600</button>
+                <button type="button" class="board-box clue-box" id="clue-1-600" onclick="getClue(1, 600)" disabled>$600</button>
+                <button type="button" class="board-box clue-box" id="clue-2-600" onclick="getClue(2, 600)" disabled>$600</button>
+                <button type="button" class="board-box clue-box" id="clue-3-600" onclick="getClue(3, 600)" disabled>$600</button>
+                <button type="button" class="board-box clue-box" id="clue-4-600" onclick="getClue(4, 600)" disabled>$600</button>
+                <button type="button" class="board-box clue-box" id="clue-5-600" onclick="getClue(5, 600)" disabled>$600</button>
+            </div>
+
+            <div class="board-row">
+                <button type="button" class="board-box clue-box" id="clue-0-800" onclick="getClue(0, 800)" disabled>$800</button>
+                <button type="button" class="board-box clue-box" id="clue-1-800" onclick="getClue(1, 800)" disabled>$800</button>
+                <button type="button" class="board-box clue-box" id="clue-2-800" onclick="getClue(2, 800)" disabled>$800</button>
+                <button type="button" class="board-box clue-box" id="clue-3-800" onclick="getClue(3, 800)" disabled>$800</button>
+                <button type="button" class="board-box clue-box" id="clue-4-800" onclick="getClue(4, 800)" disabled>$800</button>
+                <button type="button" class="board-box clue-box" id="clue-5-800" onclick="getClue(5, 800)" disabled>$800</button>
+            </div>
+
+            <div class="board-row">
+                <button type="button" class="board-box clue-box" id="clue-0-1000" onclick="getClue(0, 1000)" disabled>$1000</button>
+                <button type="button" class="board-box clue-box" id="clue-1-1000" onclick="getClue(1, 1000)" disabled>$1000</button>
+                <button type="button" class="board-box clue-box" id="clue-2-1000" onclick="getClue(2, 1000)" disabled>$1000</button>
+                <button type="button" class="board-box clue-box" id="clue-3-1000" onclick="getClue(3, 1000)" disabled>$1000</button>
+                <button type="button" class="board-box clue-box" id="clue-4-1000" onclick="getClue(4, 1000)" disabled>$1000</button>
+                <button type="button" class="board-box clue-box" id="clue-5-1000" onclick="getClue(5, 1000)" disabled>$1000</button>
+            </div>
+        </div>
+    </div>
+
+    <script text="type/javascript" src="/script.js"></script>
+</body>
+</html>

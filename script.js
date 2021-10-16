@@ -29,11 +29,16 @@ async function getCategories() {
 
         if (!currentCategories.includes(category)) {
             let validCategory = true;
+            let responses = [];
             for (let amount of DOLLAR_AMTS) {
                 const url = "https://jservice.io/api/clues?"
                     + "category=" + category.id
                     + "&value=" + amount;
-                const response = await fetch(url);
+                responses.push(fetch(url));
+            }
+
+            for (let response of responses) {
+                response = await response;
                 const json = await response.json();
                 if (isEmpty(json)) {
                     validCategory = false;

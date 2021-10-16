@@ -12,6 +12,7 @@ document.getElementById("answerSubmit").addEventListener("click", function(event
 });
 
 async function getCategories() {
+    updateScore(0);
     activateAll(false);
     for (let i = 0; i < NUM_CATEGORIES; i++) {
         document.getElementById("cat-"+i).innerHTML = "";

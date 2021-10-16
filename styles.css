@@ -91,3 +91,20 @@
     background-color: gray;
     color: lightgray;
 }
+
+#footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+#footer div {
+    padding: 1rem;
+    margin: auto;
+    background-color: gray;
+    border-radius: 1rem;
+}
+
+#footer img {
+    height: 2rem;
+}

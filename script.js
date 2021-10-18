@@ -122,7 +122,8 @@ function answersMatch(userAnswer) {
             && word[0] !== "<"
             && word !== "a"
             && word !== "the"
-            && word !== "&") {
+            && word !== "&"
+            && word !== "an") {
             return false;
         }
     }
